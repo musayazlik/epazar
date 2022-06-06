@@ -32,7 +32,12 @@ export default function Register() {
 
     return (
         <Guest>
-            <Head title="Register" />
+          <Head title="Register" >
+            <link rel="apple-touch-icon" sizes="180x180" href="assets/image/Logo.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="assets/image/Logo.png"/>
+            <link rel="icon" type="image/png" sizes="16x16" href="assets/image/Logo.png"/>
+
+          </Head>
 
             <ValidationErrors errors={errors} />
 
