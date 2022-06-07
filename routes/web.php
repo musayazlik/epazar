@@ -30,5 +30,8 @@ Route::get('/dashboard', function () {
 Route::get('/urunler', function () {
     return Inertia::render('Urunler');
 })->middleware(['auth', 'verified'])->name('urunler');
+Route::get('/urunler/create', function () {
+  return Inertia::render('urunCreate');
+})->middleware(['auth', 'verified'])->name('urunCreate');
 
 require __DIR__.'/auth.php';
