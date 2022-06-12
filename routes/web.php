@@ -27,11 +27,17 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 Route::get('/urunler', function () {
     return Inertia::render('Urunler');
 })->middleware(['auth', 'verified'])->name('urunler');
+
 Route::get('/urunler/create', function () {
   return Inertia::render('urunCreate');
 })->middleware(['auth', 'verified'])->name('urunCreate');
+
+Route::get('/siparisler', function () {
+    return Inertia::render('Siparisler');
+})->middleware(['auth', 'verified'])->name('siparisler');
 
 require __DIR__.'/auth.php';

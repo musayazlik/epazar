@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Regions;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
@@ -27,6 +29,8 @@ class DatabaseSeeder extends Seeder
       'remember_token' => Hash::make(123456789123456789),
     ]);
 
-    $this->call([Products::class, Categories::class]);
+
+
+    $this->call([Products::class, Categories::class, RegionsSeeder::class, StoresSeeder::class]);
   }
 }

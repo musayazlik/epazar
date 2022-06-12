@@ -7,20 +7,18 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
   /**
    * Run the migrations.
-   *
    * @return void
    */
   public function up()
   {
-    Schema::create('orders', function (Blueprint $table) {
+    Schema::create('stores', function (Blueprint $table) {
       $table->increments('id');
       $table->string('name');
-      $table->string('email');
-      $table->string('message');
-      $table->unsignedBigInteger('store_id');
       $table->unsignedBigInteger('region_id');
-      $table->string('total');
       $table->timestamps();
+
+      $table->foreign('region_id')
+        ->references('id')->on('regions')->onDelete('cascade');
     });
   }
 
@@ -31,6 +29,6 @@ return new class extends Migration {
    */
   public function down()
   {
-    Schema::dropIfExists('orders');
+    Schema::dropIfExists('stores');
   }
 };

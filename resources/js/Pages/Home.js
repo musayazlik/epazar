@@ -8,6 +8,7 @@ export default function Home(props) {
   const [open, setOpen] = useState(false);
   const [categoryId, setCategoryId] = useState(1);
   const [addToCart, setAddToCart] = useState([]);
+  const [total, setTotal] = useState(0);
   console.log(addToCart);
   return (
     <>
@@ -106,6 +107,8 @@ export default function Home(props) {
                 setCategoryId: setCategoryId,
                 addToCart: addToCart,
                 setAddToCart: setAddToCart,
+                total: total,
+                setTotal: setTotal,
               }}
             />
           </div>
@@ -117,6 +120,8 @@ export default function Home(props) {
           setOpen={setOpen}
           addToCart={addToCart}
           setAddToCart={setAddToCart}
+          total={total}
+          setTotal={setTotal}
         />
       </div>
     </>
