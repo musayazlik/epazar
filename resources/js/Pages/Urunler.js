@@ -55,22 +55,22 @@ export default function Urunler(props) {
                   <thead class="text-xs text-white uppercase bg-gray-700 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                       <th scope="col" className="px-6 py-3">
-                        Image
+                        Resim
                       </th>
                       <th
                         scope="col"
                         class="px-6 py-3 break-normal text-nowrap whitespace-nowrap"
                       >
-                        Name
+                        Başlık
                       </th>
                       <th scope="col" class="px-6 py-3">
-                        Price
+                        Fiyat
                       </th>
                       <th scope="col" class="px-6 py-3">
-                        Category
+                        Kategori
                       </th>
                       <th scope="col" class="px-6 py-3">
-                        Description
+                        Tanım
                       </th>
                       <th scope="col" class="px-6 py-3"></th>
                     </tr>

@@ -6566,6 +6566,7 @@ function Siparisler(props) {
       console.log(err);
     });
   }, []);
+  console.log(siparisler);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_Layouts_Authenticated__WEBPACK_IMPORTED_MODULE_1__["default"], {
     auth: props.auth,
     errors: props.errors,
@@ -6601,10 +6602,6 @@ function Siparisler(props) {
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                       scope: "col",
                       className: "px-6 py-3",
-                      children: "Adres"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
-                      scope: "col",
-                      className: "px-6 py-3",
                       children: "Sipari\u015F Notu"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                       scope: "col",
@@ -6625,36 +6622,28 @@ function Siparisler(props) {
                         })
                       })
                     })
-                  }) : urunler.map(function (urun, index) {
+                  }) : siparisler.map(function (item, index) {
                     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
                       className: "bg-white dark: hover:bg-gray-300 duration-200",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
                         className: "px-6 py-4",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                          src: "".concat(urun.image),
-                          alt: "product",
-                          className: "h-12 w-12"
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
-                        scope: "row",
-                        className: "px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap",
-                        children: urun.title
+                        children: item.name
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
                         className: "px-6 py-4",
-                        children: urun.price
+                        children: item.email
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
                         className: "px-6 py-4",
-                        children: urun.description.length > 160 ? urun.description.slice(0, 160) + "..." : urun.description
+                        children: item.message.length > 160 ? item.message.slice(0, 160) + "..." : item.message
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("td", {
                         className: "px-6 py-4 text-right",
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
                           type: "button",
                           className: "focus:outline-none text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm  py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 px-10 shadow-lg shadow-green-500/40",
-                          children: "Edit"
+                          children: "Detay"
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
                           type: "button",
                           className: "focus:outline-none text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm  py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 px-8 shadow-lg shadow-red-500/40",
-                          children: "Delete"
+                          children: "Sil"
                         })]
                       })]
                     }, index);
@@ -6763,23 +6752,23 @@ function Urunler(props) {
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                       scope: "col",
                       className: "px-6 py-3",
-                      children: "Image"
+                      children: "Resim"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                       scope: "col",
                       "class": "px-6 py-3 break-normal text-nowrap whitespace-nowrap",
-                      children: "Name"
+                      children: "Ba\u015Fl\u0131k"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                       scope: "col",
                       "class": "px-6 py-3",
-                      children: "Price"
+                      children: "Fiyat"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                       scope: "col",
                       "class": "px-6 py-3",
-                      children: "Category"
+                      children: "Kategori"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                       scope: "col",
                       "class": "px-6 py-3",
-                      children: "Description"
+                      children: "Tan\u0131m"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
                       scope: "col",
                       "class": "px-6 py-3"
