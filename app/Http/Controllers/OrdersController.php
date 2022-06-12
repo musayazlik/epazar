@@ -22,9 +22,19 @@ class OrdersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
+        $order = new Orders();
+        $order->name = $request->name;
+        $order->email = $request->email;
+        $order->message = $request->message;
+        $order ->region_id = (int)$request->region_id;
+        $order ->store_id = (int)$request->store_id;
+        $order->total = $request->total;
+        $order->save();
+
+        return response()->json(['success' => true]);
     }
 
     /**
@@ -34,8 +44,12 @@ class OrdersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+
     {
-        //
+
+
+
+
     }
 
     /**

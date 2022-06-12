@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import ApplicationLogo from "@/Components/ApplicationLogo";
 import Dropdown from "@/Components/Dropdown";
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
-import { Link } from "@inertiajs/inertia-react";
+import {Link} from "@inertiajs/inertia-react";
 
-export default function Authenticated({ auth, header, children }) {
+export default function Authenticated({auth, header, children}) {
   const [showingNavigationDropdown, setShowingNavigationDropdown] =
     useState(false);
 
@@ -20,7 +20,7 @@ export default function Authenticated({ auth, header, children }) {
                   <img
                     src="assets/image/Logo.png"
                     alt=""
-                    style={{ width: "40px" }}
+                    style={{width: "40px"}}
                   />
                 </Link>
               </div>
@@ -37,6 +37,12 @@ export default function Authenticated({ auth, header, children }) {
                   active={route().current("urunler")}
                 >
                   Ürünler
+                </NavLink>
+                <NavLink
+                  href={route("siparisler")}
+                  active={route().current("siparisler")}
+                >
+                  Siparişler
                 </NavLink>
               </div>
             </div>
@@ -137,6 +143,12 @@ export default function Authenticated({ auth, header, children }) {
               active={route().current("urunler")}
             >
               Ürünler
+            </ResponsiveNavLink>
+            <ResponsiveNavLink
+              href={route("siparisler")}
+              active={route().current("siparisler")}
+            >
+              Siparişler
             </ResponsiveNavLink>
           </div>
 

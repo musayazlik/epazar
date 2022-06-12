@@ -12,14 +12,9 @@ return new class extends Migration {
    */
   public function up()
   {
-    Schema::create('orders', function (Blueprint $table) {
-      $table->increments('id');
+    Schema::create('regions', function (Blueprint $table) {
+      $table->id()->autoIncrement();
       $table->string('name');
-      $table->string('email');
-      $table->string('message');
-      $table->unsignedBigInteger('store_id');
-      $table->unsignedBigInteger('region_id');
-      $table->string('total');
       $table->timestamps();
     });
   }
@@ -31,6 +26,6 @@ return new class extends Migration {
    */
   public function down()
   {
-    Schema::dropIfExists('orders');
+    Schema::dropIfExists('regions');
   }
 };
