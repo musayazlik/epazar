@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
 
 
     \App\Models\User::factory()->create([
-      'name' => 'Musa Yazlık',
-      'email' => 'musayazlik1997@gmail.com',
+      'name' => 'Admin',
+      'email' => 'admin@gmail.com',
       'email_verified_at' => now(),
       'password' => Hash::make('12345678'),
       'remember_token' => Hash::make(123456789123456789),

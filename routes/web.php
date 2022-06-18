@@ -40,4 +40,12 @@ Route::get('/siparisler', function () {
     return Inertia::render('Siparisler');
 })->middleware(['auth', 'verified'])->name('siparisler');
 
+Route::get('/kategoriler', function () {
+    return Inertia::render('Kategoriler');
+})->middleware(['auth', 'verified'])->name('kategoriler');
+
+Route::get('/kategori/create', function () {
+  return Inertia::render('kategoriCreate');
+})->middleware(['auth', 'verified'])->name('kategoriCreate');
+
 require __DIR__.'/auth.php';

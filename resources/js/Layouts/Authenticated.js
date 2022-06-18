@@ -44,6 +44,13 @@ export default function Authenticated({auth, header, children}) {
                 >
                   Siparişler
                 </NavLink>
+
+                <NavLink
+                  href={route("kategoriler")}
+                  active={route().current("kategoriler")}
+                >
+                  Kategoriler
+                </NavLink>
               </div>
             </div>
 
@@ -147,6 +154,13 @@ export default function Authenticated({auth, header, children}) {
             <ResponsiveNavLink
               href={route("siparisler")}
               active={route().current("siparisler")}
+            >
+              Siparişler
+            </ResponsiveNavLink>
+
+            <ResponsiveNavLink
+              href={route("kategoriler")}
+              active={route().current("kategoriler")}
             >
               Siparişler
             </ResponsiveNavLink>

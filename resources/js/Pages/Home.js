@@ -3,6 +3,7 @@ import {Link, Head} from "@inertiajs/inertia-react";
 import Aside from "@/Components/Home/Aside/aside";
 import Content from "@/Components/Home/Content/content";
 import Basket from "@/Components/Home/basket";
+import AsideMobile from "@/Components/Home/Aside/AsideMobile";
 
 export default function Home(props) {
   const [open, setOpen] = useState(false);
@@ -94,13 +95,14 @@ export default function Home(props) {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="grid grid-cols-12 gap-x-9">
-          <div className="col-span-3">
+        <div className="flex justify-center sm:grid sm:grid-cols-12 gap-x-9">
+          <div className="col-span-5 xl:col-span-3 hidden sm:flex">
             <Aside
               props={{categoryId: categoryId, setCategoryId: setCategoryId}}
             />
           </div>
-          <div className="col-span-9">
+          <div className="col-span-7 xl:col-span-9 flex sm:hidden justify-center">
+            <AsideMobile props={{categoryId: categoryId, setCategoryId: setCategoryId}} />
             <Content
               props={{
                 categoryId: categoryId,
