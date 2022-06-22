@@ -17,7 +17,6 @@ function Aside({ props }) {
         console.log(err);
       });
   }, []);
-  console.log(props.categoryId);
 
   return (
     <>

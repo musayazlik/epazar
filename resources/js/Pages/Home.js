@@ -78,7 +78,7 @@ export default function Home(props) {
                 <>
                   <Link
                     href={route("login")}
-                    className="bg-gray-900 hover:bg-red-800 text-white font-semibold hover:text-white py-2 px-4  border-red-600 border-2 rounded duration-200 text-lg hover:shadow-md hover:shadow-red-700/50"
+                    className="bg-gray-900 hover:bg-red-800 text-white font-semibold hover:text-white py-2 px-4  border-red-600 border-2 rounded duration-200 text-lg hover:shadow-md hover:shadow-red-700/50 whitespace-nowrap "
                   >
                     Log in
                   </Link>

@@ -4571,8 +4571,9 @@ function AsideMobile(_ref) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("option", {
               id: item.id,
               value: item.id,
-              onChange: function onChange() {
+              onClick: function onClick() {
                 props.setCategoryId(item.id);
+                console.log(item.id);
               },
               children: [" ", item.name, " "]
             });
@@ -4643,7 +4644,6 @@ function Aside(_ref) {
       console.log(err);
     });
   }, []);
-  console.log(props.categoryId);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "container mx-auto",
@@ -6561,7 +6561,7 @@ function Home(props) {
             }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
                 href: route("login"),
-                className: "bg-gray-900 hover:bg-red-800 text-white font-semibold hover:text-white py-2 px-4  border-red-600 border-2 rounded duration-200 text-lg hover:shadow-md hover:shadow-red-700/50",
+                className: "bg-gray-900 hover:bg-red-800 text-white font-semibold hover:text-white py-2 px-4  border-red-600 border-2 rounded duration-200 text-lg hover:shadow-md hover:shadow-red-700/50 whitespace-nowrap ",
                 children: "Log in"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
                 href: route("register"),
