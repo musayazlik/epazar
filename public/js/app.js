@@ -4794,7 +4794,7 @@ function Content(_ref) {
                       className: " max-w-[80px]",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
                         type: "number",
-                        className: " form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-red-600 focus:outline-none ",
+                        className: "\r form-control\r block\r w-full\r px-3\r py-1.5\r text-base\r font-normal\r text-gray-700\r bg-white bg-clip-padding\r border border-solid border-gray-300\r rounded\r transition\r ease-in-out\r m-0\r focus:text-gray-700 focus:bg-white focus:border-red-600 focus:outline-none\r ",
                         id: "exampleNumber0",
                         placeholder: "",
                         max: "20",
@@ -5158,7 +5158,7 @@ var Basket = function Basket(_ref) {
                               handleChange(e);
                             },
                             type: "text",
-                            className: " form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-red-600 focus:outline-none ",
+                            className: "\r form-control\r block\r w-full\r px-3\r py-1.5\r text-base\r font-normal\r text-gray-700\r bg-white bg-clip-padding\r border border-solid border-gray-300\r rounded\r transition\r ease-in-out\r m-0\r focus:text-gray-700 focus:bg-white focus:border-red-600 focus:outline-none\r ",
                             id: "name",
                             placeholder: "\u0130sminizi giriniz...",
                             name: "name",
@@ -5179,7 +5179,7 @@ var Basket = function Basket(_ref) {
                               handleChange(e);
                             },
                             type: "email",
-                            className: " form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-red-600 focus:outline-none ",
+                            className: "\r form-control\r block\r w-full\r px-3\r py-1.5\r text-base\r font-normal\r text-gray-700\r bg-white bg-clip-padding\r border border-solid border-gray-300\r rounded\r transition\r ease-in-out\r m-0\r focus:text-gray-700 focus:bg-white focus:border-red-600 focus:outline-none\r ",
                             id: "email",
                             placeholder: "Mail adresinizi giriniz...",
                             name: "email",
@@ -5198,7 +5198,7 @@ var Basket = function Basket(_ref) {
                             onChange: function onChange(e) {
                               handleChange(e);
                             },
-                            className: " form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white border-2 focus:border-red-600 focus:outline-none ",
+                            className: "\r form-control\r block\r w-full\r px-3\r py-1.5\r text-base\r font-normal\r text-gray-700\r bg-white bg-clip-padding\r border-solid border-gray-300\r rounded\r transition\r ease-in-out\r m-0\r focus:text-gray-700 focus:bg-white border-2 focus:border-red-600 focus:outline-none\r ",
                             id: "message",
                             rows: "3",
                             placeholder: "Sipari\u015Finizi giriniz...",
@@ -6585,12 +6585,15 @@ function Home(props) {
             }
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-          className: "col-span-7 xl:col-span-9 flex sm:hidden justify-center",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Home_Aside_AsideMobile__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            props: {
-              categoryId: categoryId,
-              setCategoryId: setCategoryId
-            }
+          className: "col-span-7 xl:col-span-9 justify-center",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+            className: " flex sm:hidden",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Home_Aside_AsideMobile__WEBPACK_IMPORTED_MODULE_5__["default"], {
+              props: {
+                categoryId: categoryId,
+                setCategoryId: setCategoryId
+              }
+            })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Home_Content_content__WEBPACK_IMPORTED_MODULE_3__["default"], {
             props: {
               categoryId: categoryId,
@@ -6706,7 +6709,7 @@ function Kategoriler(props) {
               role: "button",
               className: "createProduct ",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
-                className: "block focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm py-2.5 my-3 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 px-8 shadow-lg shadow-yellow-500/60 mt-6 mr-8",
+                className: "block focus:outline-none text-white\r bg-yellow-400 hover:bg-yellow-500 focus:ring-4\r focus:ring-yellow-300 font-medium rounded-lg text-sm\r py-2.5 my-3 dark:bg-yellow-600\r dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 px-8\r shadow-lg shadow-yellow-500/60 mt-6 mr-8",
                 href: route("kategoriCreate"),
                 children: "Kategori Ekle"
               })
@@ -7018,7 +7021,7 @@ function Urunler(props) {
               role: "button",
               className: "createProduct ",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
-                className: "block focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm py-2.5 my-3 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 px-8 shadow-lg shadow-yellow-500/60 mt-6 mr-8",
+                className: "block focus:outline-none text-white\r bg-yellow-400 hover:bg-yellow-500 focus:ring-4\r focus:ring-yellow-300 font-medium rounded-lg text-sm\r py-2.5 my-3 dark:bg-yellow-600\r dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 px-8\r shadow-lg shadow-yellow-500/60 mt-6 mr-8",
                 href: route("urunCreate"),
                 children: "\xDCr\xFCn ekle"
               })
