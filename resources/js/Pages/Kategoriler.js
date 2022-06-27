@@ -3,28 +3,30 @@ import Authenticated from "@/Layouts/Authenticated";
 import {Head, Link} from "@inertiajs/inertia-react";
 import axios from "axios";
 
-export default function Urunler(props) {
-  const [urunler, setUrunler] = React.useState([]);
+export default function Kategoriler(props) {
+  const [kategoriler, setKategoriler] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+
 
   React.useEffect(() => {
     axios
-      .get("/api/products")
+      .get("/api/categories")
       .then((res) => {
-        setUrunler(res.data);
+        setKategoriler(res.data);
         setLoading(false);
+
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
-  const urundelete = (id) => {
+  const kategoridelete = (id) => {
     axios
-      .delete(`/api/products/${id}`)
+      .delete(`/api/categories/${id}`)
       .then((res) => {
-        const filter = urunler.filter(urun => urun.id !== id);
-        setUrunler(filter);
+        const filter = kategoriler.filter(kategori => kategori.id !== id);
+        setKategoriler(filter);
       })
       .catch((err) => {
         console.log(err);
@@ -56,9 +58,9 @@ export default function Urunler(props) {
                       py-2.5 my-3 dark:bg-yellow-600
                       dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 px-8
                       shadow-lg shadow-yellow-500/60 mt-6 mr-8"
-                  href={route("urunCreate")}
+                  href={route("kategoriCreate")}
                 >
-                  Ürün ekle
+                  Kategori Ekle
                 </Link>
               </div>
             </div>
@@ -68,22 +70,13 @@ export default function Urunler(props) {
                   <thead className="text-xs text-white uppercase bg-gray-700 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
                     <th scope="col" className="px-6 py-3">
-                      Resim
+                      Id
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 break-normal text-nowrap whitespace-nowrap"
                     >
-                      Başlık
-                    </th>
-                    <th scope="col" className="px-6 py-3">
-                      Fiyat
-                    </th>
-                    <th scope="col" className="px-6 py-3">
-                      Kategori
-                    </th>
-                    <th scope="col" className="px-6 py-3">
-                      Tanım
+                      İsim
                     </th>
                     <th scope="col" className="px-6 py-3"></th>
                   </tr>
@@ -101,40 +94,27 @@ export default function Urunler(props) {
                       </td>
                     </tr>
                   ) : (
-                    urunler.map((urun, index) => (
+                    kategoriler.map((kategori, index) => (
                       <tr
                         key={index}
-                        className="bg-white dark: hover:bg-gray-300 duration-200"
+                        className="bg-white hover:bg-gray-300 duration-200"
                       >
-                        <td className="px-6 py-4">
-                          <img
-                            src={`storage/images/products/${urun.image}`}
-                            alt="product"
-                            className="h-12 w-12"
-                          />
-                        </td>
                         <th
                           scope="row"
                           className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
                         >
-                          {urun.title}
+                          {kategori.id}
                         </th>
-                        <td className="px-6 py-4">{urun.price}</td>
-                        <td className="px-6 py-4">{urun.category}</td>
-                        <td className="px-6 py-4">
-                          {urun.description.length > 160
-                            ? urun.description.slice(0, 160) + "..."
-                            : urun.description}
-                        </td>
+                        <th
+                          scope="row"
+                          className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+                        >
+                          {kategori.name}
+                        </th>
+
                         <td className="px-6 py-4 text-right">
-                          <button
-                            type="button"
-                            className="focus:outline-none text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm  py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 px-10 shadow-lg shadow-green-500/40"
-                          >
-                            Edit
-                          </button>
                           <button onClick={() => {
-                            urundelete(urun.id)
+                            kategoridelete(kategori.id)
                           }}
                                   type="button"
                                   className="focus:outline-none text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm  py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 px-8 shadow-lg shadow-red-500/40"

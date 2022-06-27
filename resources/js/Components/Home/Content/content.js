@@ -23,7 +23,7 @@ function Content({props}) {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-x-8 gap-y-8">
+      <div className="grid xl:grid-cols-3 center gap-x-8 gap-y-8 ">
         {loading ? (
           <div className="col-span-3">
             <div className="flex justify-center">
@@ -39,7 +39,7 @@ function Content({props}) {
                 className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-lg shadow-gray-300/30 dark:bg-gray-800 dark:border-gray-700 h-full flex flex-col justify-between">
                 <div className="p-5">
                   <a href="#">
-                    <img className="rounded-t-lg" src={item.image} alt=""/>
+                    <img className="rounded-t-lg" src={`storage/images/products/${item.image}`} alt=""/>
                   </a>
                   <a href="#">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

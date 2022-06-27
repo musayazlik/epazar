@@ -19,6 +19,8 @@ export default function Siparisler(props) {
       });
   }, []);
 
+  console.log(siparisler);
+
   return (
     <Authenticated
       auth={props.auth}
@@ -49,9 +51,6 @@ export default function Siparisler(props) {
                         Email
                       </th>
                       <th scope="col" className="px-6 py-3">
-                        Adres
-                      </th>
-                      <th scope="col" className="px-6 py-3">
                         Sipariş Notu
                       </th>
                       <th scope="col" className="px-6 py-3"></th>
@@ -70,42 +69,32 @@ export default function Siparisler(props) {
                         </td>
                       </tr>
                     ) : (
-                      urunler.map((urun, index) => (
+                      siparisler.map((item, index) => (
                         <tr
                           key={index}
                           className="bg-white dark: hover:bg-gray-300 duration-200"
                         >
                           <td className="px-6 py-4">
-                            <img
-                              src={`${urun.image}`}
-                              alt="product"
-                              className="h-12 w-12"
-                            />
+                            {item.name}
                           </td>
-                          <th
-                            scope="row"
-                            className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
-                          >
-                            {urun.title}
-                          </th>
-                          <td className="px-6 py-4">{urun.price}</td>
+                          <td className="px-6 py-4">{item.email}</td>
                           <td className="px-6 py-4">
-                            {urun.description.length > 160
-                              ? urun.description.slice(0, 160) + "..."
-                              : urun.description}
+                            {item.message.length > 160
+                              ? item.message.slice(0, 160) + "..."
+                              : item.message}
                           </td>
                           <td className="px-6 py-4 text-right">
                             <button
                               type="button"
                               className="focus:outline-none text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm  py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 px-10 shadow-lg shadow-green-500/40"
                             >
-                              Edit
+                              Detay
                             </button>
                             <button
                               type="button"
                               className="focus:outline-none text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm  py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 px-8 shadow-lg shadow-red-500/40"
                             >
-                              Delete
+                              Sil
                             </button>
                           </td>
                         </tr>

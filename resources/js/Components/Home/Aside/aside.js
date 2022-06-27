@@ -17,7 +17,6 @@ function Aside({ props }) {
         console.log(err);
       });
   }, []);
-  console.log(props.categoryId);
 
   return (
     <>
@@ -31,7 +30,7 @@ function Aside({ props }) {
               onClick={() => {
                 props.setCategoryId(item.id);
               }}
-              class={`w-full px-4 py-4 text-xl font-semibold hover:border-b border-b hover:border-red-600 border-gray-200 dark:border-gray-600 hover:bg-red-600 hover:text-white duration-200 cursor-pointer ${
+              className={`w-full px-4 py-4 text-xl font-semibold hover:border-b border-b hover:border-red-600 border-gray-200 dark:border-gray-600 hover:bg-red-600 hover:text-white duration-200 cursor-pointer ${
                 item.id === props.categoryId
                   ? "bg-red-600 text-white"
                   : "bg-white"

@@ -183,7 +183,7 @@ const Basket = ({open, setOpen, addToCart, setAddToCart, total, setTotal}) => {
                                   <div
                                     className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                     <img
-                                      src={product.image}
+                                      src={`storage/images/products/${product.image}`}
                                       alt={product.title}
                                       className="h-full w-full object-cover object-center"
                                     />

@@ -24,8 +24,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/products', [ProductsController::class, 'index']);
+Route::post('/products', [ProductsController::class, 'store']);
+Route::delete('/products/{id}', [ProductsController::class, 'destroy']);
 Route::get('/categories', [CategoriesController::class, 'index']);
-Route::post('/orders', [OrdersController::class, 'create']);
+Route::post('/categories', [CategoriesController::class, 'create']);
+Route::delete('/categories/{id}', [CategoriesController::class, 'destroy']);
 Route::get('/stores', [StoresController::class, 'index']);
+Route::post('/orders', [OrdersController::class, 'create']);
+Route::get('/orders', [OrdersController::class, 'index']);
 Route::get('/regions', [RegionsController::class, 'index']);
 
